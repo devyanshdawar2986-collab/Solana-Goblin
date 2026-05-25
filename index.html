@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$GOB - The Next 100x</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Premium Fonts: Anton for loud headings, Space Grotesk for sleek text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Base Setup */
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #030303;
+            /* Deepest black */
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-anton {
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 0.05em;
+        }
+
+        /* 🚀 Lag-free GPU Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(50px) scale(0.95);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Floating effect for main images */
+        @keyframes hoverFloat {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float-anim {
+            animation: hoverFloat 6s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        /* Continuous Ticker Animation */
+        @keyframes ticker {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 20s linear infinite;
+            will-change: transform;
+        }
+
+        /* Custom Scrollbar - Sleek Green */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 4px;
+        }
+
+        /* Glowing border utility */
+        .glow-box {
+            box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.4);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        .glow-box:hover {
+            box-shadow: 0 0 60px -5px rgba(16, 185, 129, 0.6);
+            border: 1px solid rgba(16, 185, 129, 0.5);
+            background: rgba(16, 185, 129, 0.05);
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden selection:bg-emerald-500 selection:text-black">
+
+
+    <!-- Top Crypto Ticker-->
+    <div class="w-full bg-emerald-500 text-black py-1.5 overflow-hidden border-b border-emerald-400 relative z-50">
+        <div class="ticker-content font-anton text-sm tracking-widest uppercase">
+            <!-- Ticker text ko 2 baar repeat kiya hai smooth loop ke liye -->
+            $GOB 🚀 THE NEW NARRATIVE 🚀 100X INCOMING 🚀 ALL IN BULLISH 🚀 $GOB 🚀 THE NEW NARRATIVE 🚀 100X INCOMING
+            🚀 ALL IN BULLISH 🚀
+            $GOB 🚀 THE NEW NARRATIVE 🚀 100X INCOMING 🚀 ALL IN BULLISH 🚀 $GOB 🚀 THE NEW NARRATIVE 🚀 100X INCOMING
+            🚀 ALL IN BULLISH 🚀
+        </div>
+    </div>
+
+    <!-- Floating Glassmorphism Navbar -->
+    <nav
+        class="fixed top-12 left-1/2 -translate-x-1/2 w-[90%] max-w-2xl z-50 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 transition-all">
+        <div
+            class="flex justify-between items-center text-[10px] sm:text-xs font-bold tracking-widest uppercase text-gray-300">
+            <a href="#" class="hover:text-emerald-400 transition-colors">Dexscreener</a>
+            <span class="text-white/20">•</span>
+            <a href="https://t.me/solanagoblinpump" class="hover:text-emerald-400 transition-colors">Telegram</a>
+            <span class="text-white/20">•</span>
+            <a href="https://x.com/SolanaGoblinx" class="hover:text-emerald-400 transition-colors">Twitter</a>
+            <span class="text-white/20">•</span>
+            <a href="#" class="hover:text-emerald-400 transition-colors">Pumpluna</a>
+        </div>
+    </nav>
+
+    <!-- Main Content wrapper -->
+    <main class="w-full max-w-5xl mx-auto px-4 pt-40 pb-24 flex flex-col items-center relative">
+
+        <!-- Background Ambient Glow -->
+        <div
+            class="fixed top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none z-0">
+        </div>
+
+        <!-- HERO SECTION -->
+        <div class="relative z-10 flex flex-col items-center text-center w-full mb-20">
+
+            <!-- IMAGE 1: Hero Baby Troll -->
+            <div class="reveal-up w-full max-w-[250px] md:max-w-[300px] mb-8 relative">
+                <!-- Image ke peeche ek sharp glow -->
+                <div class="absolute inset-0 bg-emerald-500 blur-[60px] opacity-20 rounded-full"></div>
+                <!-- Yash bhai, Yahan main image daalni hai -->
+                <img src="/Assets/a.png" alt="Gob Main"
+                    class="w-full h-auto float-anim relative z-10 drop-shadow-2xl filter contrast-125">
+            </div>
+
+            <!-- Main Title -->
+            <div class="reveal-up w-full">
+                <h1 class="text-7xl md:text-[10rem] leading-none mb-6 drop-shadow-2xl">
+                    <span class="text-white">$</span><span
+                        class="text-transparent bg-clip-text bg-gradient-to-br from-emerald-400 via-green-500 to-teal-700">GOB</span>
+                </h1>
+            </div>
+
+            <!-- Contract Address Box (Sleek Terminal Style) -->
+            <div class="reveal-up w-full max-w-2xl mt-4">
+                <div onclick="copyCA()"
+                    class="group relative flex items-center justify-between bg-black border-2 border-white/10 hover:border-emerald-500 rounded-2xl p-4 sm:p-5 cursor-pointer transition-all duration-300 hover:shadow-[0_0_30px_rgba(16,185,129,0.3)] active:scale-95 overflow-hidden">
+                    <!-- Hover hone par andar ek green tint aayega -->
+                    <div
+                        class="absolute inset-0 bg-emerald-500/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    </div>
+
+                    <div class="flex items-center gap-4 relative z-10">
+                        <span
+                            class="bg-emerald-500 text-black px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-widest">CA</span>
+                        <code id="ca-text"
+                            class="text-xs sm:text-base text-gray-400 font-mono group-hover:text-white transition-colors truncate max-w-[200px] sm:max-w-md">6qdzMx4c9rL2X3Ns3SwZ8uEo4zReDPjdxpAEmpo7pump</code>
+                    </div>
+
+                    <div
+                        class="relative z-10 bg-white/5 p-2 rounded-lg group-hover:bg-emerald-500 group-hover:text-black transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Copied Indicator -->
+                <div id="copy-msg"
+                    class="h-6 mt-2 text-emerald-400 text-sm font-bold uppercase tracking-widest opacity-0 transition-opacity duration-300">
+                    Address Copied to Clipboard! ✓
+                </div>
+            </div>
+        </div>
+
+        <!-- NARRATIVE SECTION (Big, Bold, Impactful text) -->
+        <div class="reveal-up max-w-4xl text-center mb-32 px-4 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-medium leading-tight text-gray-300">
+                <span class="text-white font-anton">$GOB</span> Solana Goblin never sleeps—only pumps.
+                If you’re early, you’re already late.
+            </h2>
+            <p class="mt-8 text-xl md:text-3xl text-gray-500 font-bold">
+                In the depths of Solana’s endless chaos, where tokens are born every second and most die in silence, something strange started appearing on-chain.
+A shadow. A glitch. A goblin.
+They called it Solana Goblin. <br />
+                <span
+                    class="text-white bg-emerald-600/20 px-4 py-1 rounded-lg border border-emerald-500/30 inline-block mt-4">just
+                    later and cheaper.</span>
+            </p>
+        </div>
+
+        <!-- MASONRY / CARD GALLERY -->
+        <!-- Yahan images premium web3 cards ki tarah dikhengi -->
+        <div class="w-full flex flex-col gap-16 items-center relative z-10">
+
+            <!-- IMAGE 2: Bull Image -->
+            <div class="reveal-up w-full max-w-3xl group">
+                <div
+                    class="relative rounded-[2rem] overflow-hidden p-2 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 glow-box">
+                    <img src="/Assets/f.jpeg" alt="Bull Narrative"
+                        class="w-full h-auto rounded-[1.5rem] transition-all duration-700 transform group-hover:scale-[1.05] group-hover:saturate-[1.3] group-hover:brightness-110">
+                </div>
+            </div>
+
+            <!-- IMAGE 3: Elevator Image -->
+            <div class="reveal-up w-full max-w-3xl group">
+                <div
+                    class="relative rounded-[2rem] overflow-hidden p-2 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 glow-box">
+                    <img src="/Assets/c.jpeg" alt="Elevator Trolls"
+                        class="w-full h-auto rounded-[1.5rem] transition-all duration-700 transform group-hover:scale-[1.05] group-hover:saturate-[1.3] group-hover:brightness-110">
+                </div>
+            </div>
+
+            <!-- IMAGE 4: Chart Image -->
+            <!-- <div class="reveal-up w-full max-w-3xl group">
+                <div
+                    class="relative rounded-[2rem] overflow-hidden p-2 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 glow-box">
+                    <img src="/Assets/c.jpeg" alt="Chart Analysis"
+                        class="w-full h-auto rounded-[1.5rem] transition-all duration-700 transform group-hover:scale-[1.05] group-hover:saturate-[1.3] group-hover:brightness-110">
+                </div>
+            </div> -->
+
+            <!-- IMAGE 5: Chart Image 2 -->
+            <!-- <div class="reveal-up w-full max-w-3xl group">
+                <div
+                    class="relative rounded-[2rem] overflow-hidden p-2 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 glow-box">
+                    <img src="/Assets/d.png" alt="Chart Analysis"
+                        class="w-full h-auto rounded-[1.5rem] transition-all duration-700 transform group-hover:scale-[1.05] group-hover:saturate-[1.3] group-hover:brightness-110">
+                </div>
+            </div> -->
+
+            <!-- IMAGE 6: Chart Image 3 -->
+            <div class="reveal-up w-full max-w-3xl group">
+                <div
+                    class="relative rounded-[2rem] overflow-hidden p-2 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 glow-box">
+                    <img src="/Assets/d.png" alt="Chart Analysis"
+                        class="w-full h-auto rounded-[1.5rem] transition-all duration-700 transform group-hover:scale-[1.05] group-hover:saturate-[1.3] group-hover:brightness-110">
+                </div>
+            </div>
+            <div class="reveal-up w-full max-w-3xl group">
+                <div
+                    class="relative rounded-[2rem] overflow-hidden p-2 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 glow-box">
+                    <img src="/Assets/b.png" alt="Chart Analysis"
+                        class="w-full h-auto rounded-[1.5rem] transition-all duration-700 transform group-hover:scale-[1.05] group-hover:saturate-[1.3] group-hover:brightness-110">
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Premium Footer -->
+    <footer class="w-full py-12 border-t border-white/5 bg-black/50 backdrop-blur-md relative z-10">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col items-center gap-4">
+            <h1 class="font-anton text-3xl text-white/20">$GOB</h1>
+            <p class="text-gray-600 text-sm font-bold tracking-widest uppercase">Powered by the Community</p>
+
+            <!-- Yash Harfode Signature (Client ko achha lagega professionalism dekh kar) -->
+            <div
+                class="mt-8 px-4 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] text-gray-500 tracking-widest uppercase">
+                Crafted with 🔥 by Code Crafter
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts for Logic & Smoothness -->
+    <script>
+        // 1. Advanced Intersection Observer (Buttery Smooth reveals)
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll('.reveal-up');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Thoda delay add karne se waterfall effect aayega agar multiple elements screen par hain
+                        setTimeout(() => {
+                            entry.target.classList.add('active');
+                        }, 100);
+                        observer.unobserve(entry.target); // Performance boost
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.15, // 15% dikhne par animate
+                rootMargin: "0px"
+            });
+
+            elements.forEach(el => observer.observe(el));
+        });
+
+        // 2. Stylish Copy to Clipboard
+        function copyCA() {
+            const caString = "6qdzMx4c9rL2X3Ns3SwZ8uEo4zReDPjdxpAEmpo7pump";
+            const msgBox = document.getElementById("copy-msg");
+
+            navigator.clipboard.writeText(caString).then(() => {
+                msgBox.style.opacity = "1";
+                msgBox.style.transform = "translateY(-5px)";
+
+                setTimeout(() => {
+                    msgBox.style.opacity = "0";
+                    msgBox.style.transform = "translateY(0)";
+                }, 2500);
+            });
+        }
+    </script>
+</body>
+
+</html>
